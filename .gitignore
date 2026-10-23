@@ -1,0 +1,33 @@
+# secrets and local data
+.env
+.novelagent/
+data/
+
+# environments and build
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# models and datasets — not part of this repo
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+datasets/
+models/
+
+# os
+.DS_Store
+Thumbs.db

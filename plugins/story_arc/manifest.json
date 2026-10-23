@@ -1,0 +1,10 @@
+{
+  "id": "story_arc",
+  "display_name": "叙事弧",
+  "version": "1.0.0",
+  "author": "NovelAgent",
+  "description": "借鉴 SillyTavern StoryMode：按已写章节数注入开端 / 发展 / 转折提示。",
+  "enabled": true,
+  "loading_order": 10,
+  "prompt_file": "prompt.txt"
+}

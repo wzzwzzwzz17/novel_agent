@@ -1,0 +1,65 @@
+rate: 0.25
+burst: 3
+min_gap: 2.0
+timeout: 20
+max_candidates: 5
+max_chapters: 8
+wide_chars: 2000
+chunk_chars: 500
+min_chunks: 10
+cache_ttl_ok: 1800
+cache_ttl_fail: 180
+url_cache_ttl: 600
+circuit_fail_threshold: 3
+circuit_cooldown_sec: 900
+llm_enable: true
+proxy: auto
+trust_env: true
+site_priority:
+  - site_a
+  - site_b
+
+sites:
+  site_a:
+    name: alicesw
+    base: "https://www.alicesw.com"
+    search_url: "https://www.alicesw.com/search.html?q={keyword}&f=tag"
+    robots_url: "https://www.alicesw.com/robots.txt"
+    selectors:
+      search_result: "a[href*='/novel/']"
+      book_title: "h1, meta[property='og:title'], .book-title, title"
+      chapter_link: "a[href*='/book/']"
+      content: ".read-content, #j_chapterBox .read-content, #content"
+  site_b:
+    name: jinshuge_m
+    base: "https://m.jinshuge.org"
+    search_url: "https://m.jinshuge.org/search/{keyword}.html"
+    robots_url: "https://m.jinshuge.org/robots.txt"
+    selectors:
+      search_result: "a[href*='/info/']"
+      book_title: "meta[property='og:title'], h1, .bookname, .title, title"
+      chapter_link: "a[href*='/reader/']"
+      content: "#nr, #nr1, .nr_nr, #chaptercontent, .content"
+
+ad_blacklist:
+  - 请点击
+  - 本章未完
+  - 广告
+  - 最新网址
+  - 手机版阅读
+  - 加入书签
+  - 点击下一章
+  - 加入书架
+  - 一秒记住
+  - 笔趣阁
+  - 注意：该小说包含以上标签
+
+ui_noise_b:
+  - 上一章
+  - 下一章
+  - 目录
+  - 加入书架
+  - 返回首页
+  - 夜间模式
+  - 关灯
+  - 护眼

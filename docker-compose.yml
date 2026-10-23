@@ -1,0 +1,19 @@
+services:
+  novel-agent:
+    build: .
+    ports:
+      - "8787:8787"
+    environment:
+      DEPLOY_PROFILE: cloud
+      LOCAL_LLM_ENABLED: "false"
+      MODEL_MODE: api_only
+      NOVELAGENT_HOME: /data
+      LLM_PRIMARY_BASE_URL: ${LLM_PRIMARY_BASE_URL:-https://api.deepseek.com/v1}
+      LLM_PRIMARY_API_KEY: ${LLM_PRIMARY_API_KEY:-}
+      LLM_PRIMARY_MODEL: ${LLM_PRIMARY_MODEL:-deepseek-chat}
+      NOVELREF_ENABLED: ${NOVELREF_ENABLED:-true}
+    volumes:
+      - novelagent_data:/data
+
+volumes:
+  novelagent_data:

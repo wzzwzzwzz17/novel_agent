@@ -1,0 +1,10 @@
+{
+  "id": "lorebook",
+  "display_name": "世界书",
+  "version": "1.0.0",
+  "author": "NovelAgent",
+  "description": "借鉴酒馆 Lorebook：总纲中的设定在每次续写时作为世界资料再次钉住，减少长篇遗忘。",
+  "enabled": true,
+  "loading_order": 20,
+  "prompt_file": "prompt.txt"
+}

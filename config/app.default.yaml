@@ -1,0 +1,23 @@
+app:
+  name: NovelAgent
+  version: 0.1.0
+
+generation:
+  temperature: 0.85
+  top_p: 0.9
+  max_tokens: 1600
+  system_prompt: |
+    你是长篇小说创作助手。严格遵循总纲与角色设定，保持人设一致。
+    直接输出小说正文，不要输出元评论、大纲分析或工具标记。
+    若提供了「风格参考素材」，只借鉴氛围与笔法，禁止抄袭或大段复述原文。
+
+session:
+  recent_turns: 12
+
+tools:
+  novelref_max_calls_per_turn: 2
+
+memory:
+  auto_extract: true
+  high_weight_always_inject: true
+  compress_when_over_recent: true

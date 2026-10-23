@@ -1,0 +1,10 @@
+{
+  "id": "prose_style",
+  "display_name": "小说笔法",
+  "version": "1.0.0",
+  "author": "NovelAgent",
+  "description": "借鉴 NovelMode：正文优先，少说明腔。对话、动作、感官细节交替，避免大纲腔和元评论。",
+  "enabled": true,
+  "loading_order": 30,
+  "prompt_file": "prompt.txt"
+}
